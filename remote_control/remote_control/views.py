@@ -14,6 +14,7 @@ from django.shortcuts import render_to_response
 from driver import camera, stream
 from picar import back_wheels, front_wheels
 from django.http import HttpResponse
+from django.http import JsonResponse
 import picar
 
 picar.setup()
@@ -150,4 +151,4 @@ def connection_test(request):
 	return HttpResponse('OK')
 
 def get_speed(request):
-	return HttpResponse(str(SPEED), content_type="text/plain")
+	return JsonResponse({'speed': SPEED})
