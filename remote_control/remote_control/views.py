@@ -148,3 +148,6 @@ def cali(request):
 
 def connection_test(request):
 	return HttpResponse('OK')
+
+def get_speed(request):
+	return HttpResponse(str(speed))
