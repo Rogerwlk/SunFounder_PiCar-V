@@ -150,4 +150,4 @@ def connection_test(request):
 	return HttpResponse('OK')
 
 def get_speed(request):
-	return HttpResponse(str(SPEED))
+	return HttpResponse(str(SPEED), content_type="text/plain")
